@@ -2,25 +2,126 @@
 'use strict';
 
 var React = require("react");
+var Js_exn = require("bs-platform/lib/js/js_exn.js");
+var Js_dict = require("bs-platform/lib/js/js_dict.js");
+var Js_json = require("bs-platform/lib/js/js_json.js");
+var Caml_option = require("bs-platform/lib/js/caml_option.js");
+var TicTacToc$ReactTemplate = require("./TicTacToc.bs.js");
+
+var ppx_printed_query = "query VideoGames  {\nallSitePage  {\npageInfo  {\nhasNextPage  \n}\n\n}\n\n}\n";
+
+function parse(value) {
+  var match = Js_json.decodeObject(value);
+  if (match !== undefined) {
+    var match$1 = Js_dict.get(Caml_option.valFromOption(match), "allSitePage");
+    var tmp;
+    if (match$1 !== undefined) {
+      var value$1 = Caml_option.valFromOption(match$1);
+      var match$2 = Js_json.decodeNull(value$1);
+      if (match$2 !== undefined) {
+        tmp = undefined;
+      } else {
+        var match$3 = Js_json.decodeObject(value$1);
+        var tmp$1;
+        if (match$3 !== undefined) {
+          var match$4 = Js_dict.get(Caml_option.valFromOption(match$3), "pageInfo");
+          var tmp$2;
+          if (match$4 !== undefined) {
+            var match$5 = Js_json.decodeObject(Caml_option.valFromOption(match$4));
+            if (match$5 !== undefined) {
+              var match$6 = Js_dict.get(Caml_option.valFromOption(match$5), "hasNextPage");
+              var tmp$3;
+              if (match$6 !== undefined) {
+                var value$2 = Caml_option.valFromOption(match$6);
+                var match$7 = Js_json.decodeBoolean(value$2);
+                tmp$3 = match$7 !== undefined ? match$7 : Js_exn.raiseError("graphql_ppx: Expected boolean, got " + JSON.stringify(value$2));
+              } else {
+                tmp$3 = Js_exn.raiseError("graphql_ppx: Field hasNextPage on type PageInfo is missing");
+              }
+              tmp$2 = {
+                hasNextPage: tmp$3
+              };
+            } else {
+              tmp$2 = Js_exn.raiseError("graphql_ppx: Object is not a value");
+            }
+          } else {
+            tmp$2 = Js_exn.raiseError("graphql_ppx: Field pageInfo on type SitePageConnection is missing");
+          }
+          tmp$1 = {
+            pageInfo: tmp$2
+          };
+        } else {
+          tmp$1 = Js_exn.raiseError("graphql_ppx: Object is not a value");
+        }
+        tmp = Caml_option.some(tmp$1);
+      }
+    } else {
+      tmp = undefined;
+    }
+    return {
+            allSitePage: tmp
+          };
+  } else {
+    return Js_exn.raiseError("graphql_ppx: Object is not a value");
+  }
+}
+
+function make(param) {
+  return {
+          query: ppx_printed_query,
+          variables: null,
+          parse: parse
+        };
+}
+
+function makeWithVariables(param) {
+  return {
+          query: ppx_printed_query,
+          variables: null,
+          parse: parse
+        };
+}
+
+function ret_type(f) {
+  return /* module */[];
+}
+
+var MT_Ret = /* module */[];
+
+var VideoGames = /* module */[
+  /* ppx_printed_query */ppx_printed_query,
+  /* query */ppx_printed_query,
+  /* parse */parse,
+  /* make */make,
+  /* makeWithVariables */makeWithVariables,
+  /* ret_type */ret_type,
+  /* MT_Ret */MT_Ret
+];
 
 function str(prim) {
   return prim;
 }
 
 function Index(Props) {
-  return React.createElement("div", undefined, React.createElement("h1", undefined, "Gatsby" + (" ❤ " + "ReasonML")), React.createElement("p", undefined, "Use this starter to create static sites with Gatsby using ReasonML components."), React.createElement("h2", undefined, "Features"), React.createElement("ul", undefined, React.createElement("li", undefined, React.createElement("a", {
+  React.useEffect((function () {
+          return undefined;
+        }), /* array */[]);
+  return React.createElement("div", undefined, React.createElement("h1", undefined, "Gatsby" + (" ❤ " + "ReasonML")), React.createElement("p", undefined, "Use this starter to create static sites with Gatsby using ReasonML components."), React.createElement("h2", undefined, "Features"), React.createElement("img", {
+                  src: ""
+                }), React.createElement("ul", undefined, React.createElement("li", undefined, React.createElement("a", {
                           href: "https://github.com/reasonml/reason-react"
                         }, "reason-react"), " for type-safe React components in ReasonML"), React.createElement("li", undefined, React.createElement("a", {
                           href: "https://github.com/SentiaAnalytics/bs-css"
-                        }, "bs-css"), " for css-in-reason styling")), React.createElement("h2", undefined, "Reference"), React.createElement("ul", undefined, React.createElement("li", undefined, "see re/Header.re for example component implementation"), React.createElement("li", undefined, "see re/types/Gatsby.re for example BuckleScript bindings to Gatsby module")));
+                        }, "bs-css"), " for css-in-reason styling")), React.createElement("h2", undefined, "Reference"), React.createElement("ul", undefined, React.createElement("li", undefined, "see re/Header.re for example component implementation"), React.createElement("li", undefined, "see re/types/Gatsby.re for example BuckleScript bindings to Gatsby module")), React.createElement(TicTacToc$ReactTemplate.GameBoard[/* make */5], { }));
 }
 
-var make = Index;
+var make$1 = Index;
 
 var $$default = Index;
 
+exports.VideoGames = VideoGames;
 exports.str = str;
-exports.make = make;
+exports.make = make$1;
 exports.$$default = $$default;
 exports.default = $$default;
 exports.__esModule = true;

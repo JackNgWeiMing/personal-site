@@ -7,19 +7,15 @@
     "dir": "re",
     "subdirs": true
   },
-  "package-specs": [{
-    "module": "commonjs",
-    "in-source": true
-  }],
+  "package-specs": [
+    {
+      "module": "commonjs",
+      "in-source": true
+    }
+  ],
   "suffix": ".bs.js",
   "namespace": true,
-  "bs-dependencies": [
-    "reason-react",
-    "bs-css",
-    "bs-date-fns"
-  ],
-  "ppx-flags": [
-    "graphql_ppx/ppx"
-  ],
+  "bs-dependencies": ["reason-react", "bs-css", "bs-date-fns"],
+  "ppx-flags": ["graphql_ppx/ppx"],
   "refmt": 3
 }

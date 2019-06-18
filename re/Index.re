@@ -1,41 +1,69 @@
-let str = React.string;
+module VideoGames = [%graphql
+  {|
+  query VideoGames {
+    allSitePage {
+    pageInfo {
+      hasNextPage
+    }
+  }
+  }
+|}
+];
 
+let str = React.string;
 /* For a page of static text like this one, it would be easier to just use plain React
    components since we don't get to take advantage of Reason's type system */
+
 [@react.component]
 let make = () => {
+  React.useEffect1(
+    () => {
+      None;
+    },
+    [||],
+  );
+
   <div>
-    <h1> {"Gatsby" ++ {js| ❤ |js} ++ "ReasonML" |> str} </h1>
+    <h1> ("Gatsby" ++ {js| ❤ |js} ++ "ReasonML" |> str) </h1>
     <p>
-      {"Use this starter to create static sites with Gatsby using ReasonML components."
-       |> str}
+      (
+        "Use this starter to create static sites with Gatsby using ReasonML components."
+        |> str
+      )
     </p>
-    <h2> {"Features" |> str} </h2>
+    <h2> ("Features" |> str) </h2>
+    <img src="" />
     <ul>
       <li>
         <a href="https://github.com/reasonml/reason-react">
-          {"reason-react" |> str}
+          ("reason-react" |> str)
         </a>
-        {" for type-safe React components in ReasonML" |> str}
+        (" for type-safe React components in ReasonML" |> str)
       </li>
       <li>
         <a href="https://github.com/SentiaAnalytics/bs-css">
-          {"bs-css" |> str}
+          ("bs-css" |> str)
         </a>
-        {" for css-in-reason styling" |> str}
+        (" for css-in-reason styling" |> str)
       </li>
     </ul>
-    <h2> {"Reference" |> str} </h2>
+    <h2> ("Reference" |> str) </h2>
     <ul>
       <li>
-        {"see re/Header.re for example component implementation" |> str}
+        ("see re/Header.re for example component implementation" |> str)
       </li>
       <li>
-        {"see re/types/Gatsby.re for example BuckleScript bindings to Gatsby module"
-         |> str}
+        (
+          "see re/types/Gatsby.re for example BuckleScript bindings to Gatsby module"
+          |> str
+        )
       </li>
     </ul>
+    <TicTacToc.GameBoard />
   </div>;
+  /*****************************************************************
+   ****** Doing styling in ReasonReact is troublesome *************
+   *****************************************************************/
 };
 
 let default = make;
