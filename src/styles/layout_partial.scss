@@ -11,19 +11,22 @@
 
 
 .header {
-  .active {
+  position: fixed;
+  width: 100vw;
+  transition: all 0.2s ease-out;
+
+  &.header-active {
     transform: translateY(0);
   }
 
-  .hide {
-    transform: translateY(-70px)
+  &.header-hide {
+    transform: translateY(-70px);
   }
 }
 
 .nav {
   display: flex;
   height: 70px;
-  background-color: $primary-color;
 
   .nav-icon {
     display: flex;
