@@ -57,18 +57,12 @@ var Styles = /* module */[
 ];
 
 function Header(Props) {
-  var siteTitle = Props.siteTitle;
+  Props.siteTitle;
   return React.createElement("header", {
               className: header
             }, React.createElement("div", {
                   className: content
-                }, React.createElement("h1", {
-                      className: h1
-                    }, React.createElement(Gatsby.Link, {
-                          to: "/",
-                          className: link,
-                          children: siteTitle
-                        })), React.createElement("nav", {
+                }, React.createElement("nav", {
                       className: nav
                     }, React.createElement(Gatsby.Link, {
                           to: "/blog",
