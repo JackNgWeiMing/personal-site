@@ -1,0 +1,74 @@
+@import "./color_partial.module.scss";
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0 auto;
+  min-height: calc(100vh);
+}
+
+
+.header {
+  .active {
+    transform: translateY(0);
+  }
+
+  .hide {
+    transform: translateY(-70px)
+  }
+}
+
+.nav {
+  display: flex;
+  height: 70px;
+  background-color: $primary-color;
+
+  .nav-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .nav-grow {
+    flex-grow: 1;
+  }
+
+  .nav-menu-icon {}
+
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    padding: 20pt;
+
+    li {
+      list-style-type: none;
+      align-self: center;
+      padding: 10px;
+      font-family: monospace;
+      font-size: 10pt;
+
+      .index {
+        color: $secondary-color;
+      }
+
+      .content {
+        color: $font-color-primary;
+        padding-left: 10px;
+        text-decoration: none;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+}
