@@ -4,7 +4,7 @@
   flex-wrap: wrap;
   padding: 40px 0px;
   font-family: monospace;
-  font-size: 0.6em;
+  font-size: 0.8em;
   list-style-type: none;
   list-style-position: inside;
 
@@ -19,6 +19,111 @@
       color: rgb(100, 255, 218);
       font-size: 14px;
       line-height: 12px;
+    }
+  }
+}
+
+
+.experience {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .experience-list {
+    list-style-type: none;
+    position: relative;
+    flex: 1 0 10%;
+    list-style-type: none;
+    padding: 0px 20px 0 0;
+    border-left: 1px solid $primary-color-light;
+
+    .experience-list-item {
+      transition: all 0.1s ease-in;
+      transition: background-color 0.2s ease-in;
+      padding: 10px 20px;
+      z-index: 1;
+      cursor: pointer;
+
+      // &.selected {
+      //   background-color: $primary-color-light;
+      //   color: $secondary-color;
+      // }
+      &:hover {
+        background-color: $primary-color-light;
+        color: $secondary-color;
+      }
+
+      &.selected {
+        background-color: $primary-color-light;
+        color: $secondary-color;
+      }
+
+    }
+
+    .experience-list-selector {
+      position: absolute;
+      display: block;
+      // left: 10px;
+      top: 10px;
+      z-index: 1;
+      pointer-events: none;
+      transition-property: all;
+      transition-duration: 0.1s;
+      transition-timing-function: ease-in;
+      border-left: 2px solid $secondary-color;
+      // background-color: #05abe0;
+
+      // filter: opacity(0.1);
+    }
+  }
+
+  .experience-block {
+    flex: 1 0 60%;
+    padding: 10px;
+
+    .experience-block-title {
+      font-size: 1.2em;
+      font-weight: 600;
+      color: $font-color-secondary;
+
+      .strong {
+        padding-left: 10px;
+      }
+    }
+
+    .experience-block-period {
+      display: block;
+      font-family: monospace;
+      margin: 10px 0;
+      font-size: 0.8em;
+    }
+
+    .experience-block-description {
+      ul {
+        list-style-type: none;
+        list-style-position: outside;
+        text-align: left;
+
+
+        li {
+          display: list-item;
+          position: relative;
+          left: 0px;
+          padding-left: 30px;
+          padding-bottom: 20px;
+
+          &::before {
+            content: "▹";
+            display: block;
+            position: absolute;
+            left: 0px;
+            // padding-right: 40px;
+            color: rgb(100, 255, 218);
+            font-size: 14px;
+          }
+
+        }
+      }
     }
   }
 
