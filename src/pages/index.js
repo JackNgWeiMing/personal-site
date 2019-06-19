@@ -32,24 +32,27 @@ const IndexPage = () => (
           enjoys building things that live on the internet. I develop
           exceptional websites and web apps that provide intuitive,
           pixel-perfect user interfaces with efficient and modern backends.
-          Shortly after graduating from Northeastern University, I joined the
-          engineering team at Upstatement where I work on a wide variety of
-          interesting and meaningful projects on a daily basis. Here's a few
-          technologies I've been working with recently:
+          Shortly after graduating from
+          <strong className={Styles.strong}> Northeastern University</strong>, I
+          joined the engineering team at Upstatement where I work on a wide
+          variety of interesting and meaningful projects on a daily basis.
+          Here's a few technologies I've been working with recently:
         </p>
-        <ul>
-          <li> Javascript (ES6+) </li>
-          <li> Typescript </li>
-          <li> C# </li>
-          <li> ReasonML </li>
-          <li> HTML </li>
-          <li> CSS </li>
-          <li> React </li>
-          <li> React-native </li>
-          <li> Android </li>
-          <li> Express </li>
-          <li> AWS </li>
-        </ul>
+        <div>
+          <ul className={Styles.skillList}>
+            <li> Javascript (ES6+) </li>
+            <li> Typescript </li>
+            <li> C# </li>
+            <li> ReasonML </li>
+            <li> HTML </li>
+            <li> CSS </li>
+            <li> React </li>
+            <li> React-native </li>
+            <li> Android </li>
+            <li> Express </li>
+            <li> AWS </li>
+          </ul>
+        </div>
       </section>
       <section className={Styles.section}>
         <h3 className={Styles.sectionTitle}>
