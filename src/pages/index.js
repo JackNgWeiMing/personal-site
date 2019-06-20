@@ -79,7 +79,7 @@ const IndexPage = () => {
           <Experience />
         </section>
 
-        <section className={Styles.section}>
+        {/* <section className={Styles.section}>
           <h3 className={Styles.sectionTitle}>
             <span className={Styles.index}> 03. </span>
             <span className={Styles.content}>Thing i have built</span>
@@ -90,18 +90,7 @@ const IndexPage = () => {
             <li> Singapore Airlines </li>
             <li> Singapore General Hospital </li>
           </ul>
-        </section>
-
-        <footer>
-          <div>
-            <p>Contact me on</p>
-            <ul>
-              <li> Github </li>
-              <li> LinkedIn </li>
-            </ul>
-          </div>
-          <div>Contac</div>
-        </footer>
+        </section> */}
       </div>
     </Layout>
   )

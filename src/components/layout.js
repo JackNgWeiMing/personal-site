@@ -47,10 +47,10 @@ const Layout = ({ children }) => {
             }}
           >
             {children}
-            <footer>
-              <div>my footer</div>
-            </footer>
           </div>
+          <footer className={Styles.footer}>
+            <span className={Styles.notes}>Built by Jack Ng 🔨</span>
+          </footer>
         </>
       )}
     />

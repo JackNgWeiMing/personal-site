@@ -76,6 +76,30 @@ ul {
 }
 
 
+.footer {
+  display: flex;
+  background-color: $primary-color-dark;
+  margin: '0 auto';
+  padding: 20px 0px;
+  font-size: 12pt;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  font-family: monospace;
+
+  .notes {}
+
+  // .contact-methods {
+  //   list-style-type: none;
+
+  //   li {
+  //     display: inline-block;
+  //     padding: 10px 20px;
+  //   }
+  // }
+}
+
+
 .bottom-space {
   margin-bottom: 1em;
 }
