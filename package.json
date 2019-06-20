@@ -41,6 +41,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "@types/node": "^12.0.8",
+    "@types/react": "^16.8.21",
+    "@types/react-dom": "^16.8.4",
+    "gatsby-plugin-typescript": "^2.0.15",
     "graphql_ppx": "^0.2.7",
     "prettier": "^1.14.2"
   },
