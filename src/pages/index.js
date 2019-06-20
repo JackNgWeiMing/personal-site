@@ -1,6 +1,8 @@
 import React, { useRef, useEffect, useState } from 'react'
+import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/layout'
+import Experience from '../components/Experience'
 import Styles from '../styles/main.module.scss'
 
 const IndexPage = () => {
@@ -73,60 +75,8 @@ const IndexPage = () => {
             <span className={Styles.content}>Where i have working </span>
             <hr className={Styles.divider} />
           </h3>
-          <div className={Styles.experience}>
-            <ul className={Styles.experienceList}>
-              <li
-                className={`${Styles.experienceListItem} ${Styles.selected}`}
-                onClick={handleClick(0)}
-              >
-                Freelance{' '}
-              </li>
-              <li
-                className={Styles.experienceListItem}
-                onClick={handleClick(0)}
-              >
-                {' '}
-                SIA{' '}
-              </li>
-              <li
-                ref={currentSelectedRef}
-                className={Styles.experienceListItem}
-                onClick={handleClick(0)}
-              >
-                {' '}
-                SGH
-              </li>
-              <div
-                ref={selectorRef}
-                className={Styles.experienceListSelector}
-              />
-            </ul>
-            <div className={Styles.experienceBlock}>
-              <h4 className={Styles.experienceBlockTitle}>
-                Mobile developer{' '}
-                <strong className={Styles.strong}>
-                  @Singapore General Hospital
-                </strong>
-              </h4>
-              <span className={Styles.experienceBlockPeriod}>
-                14 May 2019 - 16 May 2019
-              </span>
-              <p className={Styles.experienceBlockDescription}>
-                <ul>
-                  <li>
-                    Write modern, performant, maintainable code for a diverse
-                    array of client and internal projects
-                  </li>
-                  <li>
-                    Work with a variety of different languages, platforms,
-                    frameworks, and content management systems such as
-                    JavaScript, TypeScript, Gatsby, React, Craft, Wordpress,
-                    Prismic, and Netlify
-                  </li>
-                </ul>
-              </p>
-            </div>
-          </div>
+
+          <Experience />
         </section>
 
         <section className={Styles.section}>
@@ -158,3 +108,24 @@ const IndexPage = () => {
 }
 
 export default IndexPage
+
+export const pageQuery = graphql`
+  query IndexPageQuery {
+    site {
+      siteMetadata {
+        title
+        author
+      }
+    }
+    markdownRemark {
+      id
+      excerpt
+      html
+      frontmatter {
+        title
+        date(formatString: "MMMM DD, YYYY")
+        path
+      }
+    }
+  }
+`
