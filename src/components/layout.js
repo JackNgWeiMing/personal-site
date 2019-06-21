@@ -45,7 +45,7 @@ const Layout = ({ children }) => {
               position: 'relative',
               margin: '0 auto',
               maxWidth: 1000,
-              padding: '0px 1.0875rem 1.45rem',
+              padding: '0px 7.0875rem 7.45rem',
               paddingTop: 0,
               fontFamily:
                 '-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif',
@@ -54,6 +54,28 @@ const Layout = ({ children }) => {
             {children}
           </div>
           <footer className={Styles.footer}>
+            <div>
+              <ul className={Styles.contactList}>
+                <li>
+                  <a href="https://github.com/JackJackNg" target="_blank">
+                    <GithubSvg className={Styles.icon} />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/jack-ng-b2593b151/"
+                    target="_blank"
+                  >
+                    <LinkedInSvg className={Styles.icon} />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/JackNgWeiMing1" target="_blank">
+                    <TwitterSvg className={Styles.icon} />
+                  </a>
+                </li>
+              </ul>
+            </div>
             <span className={Styles.notes}>Built by Jack Ng 🔨</span>
           </footer>
           <div
@@ -64,17 +86,20 @@ const Layout = ({ children }) => {
           >
             <ul className={Styles.contactList}>
               <li>
-                <a>
+                <a href="https://github.com/JackJackNg" target="_blank">
                   <GithubSvg className={Styles.icon} />
                 </a>
               </li>
               <li>
-                <a>
+                <a
+                  href="https://www.linkedin.com/in/jack-ng-b2593b151/"
+                  target="_blank"
+                >
                   <LinkedInSvg className={Styles.icon} />
                 </a>
               </li>
               <li>
-                <a>
+                <a href="https://twitter.com/JackNgWeiMing1" target="_blank">
                   <TwitterSvg className={Styles.icon} />
                 </a>
               </li>
