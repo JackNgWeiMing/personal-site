@@ -1,3 +1,5 @@
+@import "./responsive_partial.scss";
+
 .skill-list {
   display: flex;
   flex-direction: row;
@@ -31,6 +33,10 @@
   justify-content: flex-start;
   align-items: flex-start;
 
+  @include md {
+    flex-direction: column;
+  }
+
   .experience-list {
     list-style-type: none;
     position: relative;
@@ -39,16 +45,26 @@
     padding: 0px 20px 0 0;
     border-left: 1px solid $primary-color-light;
 
+    @include md {
+      display: flex;
+      flex-direction: row;
+      max-width: 100%;
+      overflow: scroll;
+      overflow-y: hidden;
+    }
+
     .experience-list-item {
+      @include md {
+        flex-shrink: 0;
+        font-size: 0.825em;
+        padding: 10px 20px;
+      }
+
       transition: all 0.1s ease-in;
       transition: background-color 0.2s ease-in;
       padding: 20px 20px;
       z-index: 1;
 
-      // &.selected {
-      //   background-color: $primary-color-light;
-      //   color: $secondary-color;
-      // }
       &:hover {
         background-color: $primary-color-light;
         color: $secondary-color;
@@ -64,7 +80,6 @@
     .experience-list-selector {
       position: absolute;
       display: block;
-      // left: 10px;
       top: 10px;
       z-index: 1;
       pointer-events: none;
@@ -72,8 +87,13 @@
       transition-duration: 0.1s;
       transition-timing-function: ease-in;
       border-left: 2px solid $secondary-color;
-      // background-color: #05abe0; 
-      // filter: opacity(0.1);
+
+      @include md {
+
+        border-left: none;
+        border-bottom: 2px solid $secondary-color;
+      }
+
     }
   }
 
@@ -138,10 +158,18 @@
 
   &.contact-left {
     left: 40px;
+
+    @include md {
+      display: none;
+    }
   }
 
   &.contact-right {
     right: 40px;
+
+    @include md {
+      display: none;
+    }
   }
 
   &::after {
@@ -163,8 +191,6 @@
       transform: translateY(-2px);
       color: $secondary-color;
     }
-
-
   }
 
   .contact-list {

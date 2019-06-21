@@ -40,19 +40,7 @@ const Layout = ({ children }) => {
             <html lang="en" />
           </Helmet>
           <Header />
-          <div
-            style={{
-              position: 'relative',
-              margin: '0 auto',
-              maxWidth: 1000,
-              padding: '0px 7.0875rem 7.45rem',
-              paddingTop: 0,
-              fontFamily:
-                '-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif',
-            }}
-          >
-            {children}
-          </div>
+          <div className={Styles.main}>{children}</div>
           <footer className={Styles.footer}>
             <div>
               <ul className={Styles.contactList}>

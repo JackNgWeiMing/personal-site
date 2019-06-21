@@ -26,11 +26,11 @@ const IndexPage = () => {
               <strong className={Styles.strong}>Hi my name is</strong>
             </span>
             <h1>Jack Ng </h1>
-            <h2>I build things for the web </h2>
+            <h2>I build things for the web & mobile </h2>
             <p>
-              I'm a software engineer based in Boston, MA specializing in
-              building (and occasionally designing) exceptional, high-quality
-              websites and applications.
+              I'm a software engineer based Singapore speicalized in front end
+              development in Singapore. <br /> React, React Native, Typescript
+              are my best friends. I work with them to all the time.
             </p>
           </div>
         </section>
@@ -42,13 +42,11 @@ const IndexPage = () => {
             <hr className={Styles.divider} />
           </h3>
           <p>
-            Hello! I'm Brittany, a software engineer based in Boston, MA who
-            enjoys building things that live on the internet. I develop
-            exceptional websites and web apps that provide intuitive,
-            pixel-perfect user interfaces with efficient and modern backends.
-            Shortly after graduating from
-            <strong className={Styles.strong}> Northeastern University</strong>,
-            I joined the engineering team at Upstatement where I work on a wide
+            Hello! I'm Jack, a software engineer based in Singapore. I develop
+            exceptional modern websites and web apps. I have Shortly after
+            graduating from
+            <strong className={Styles.strong}>Singapore Polytehcnic</strong>, I
+            joined the engineering team at Upstatement where I work on a wide
             variety of interesting and meaningful projects on a daily basis.
             Here's a few technologies I've been working with recently:
           </p>
@@ -78,19 +76,6 @@ const IndexPage = () => {
 
           <Experience />
         </section>
-
-        {/* <section className={Styles.section}>
-          <h3 className={Styles.sectionTitle}>
-            <span className={Styles.index}> 03. </span>
-            <span className={Styles.content}>Thing i have built</span>
-            <hr className={Styles.divider} />
-          </h3>
-          <ul>
-            <li> Freelance </li>
-            <li> Singapore Airlines </li>
-            <li> Singapore General Hospital </li>
-          </ul>
-        </section> */}
       </div>
     </Layout>
   )
