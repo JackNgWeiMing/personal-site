@@ -39,7 +39,6 @@ const Layout = ({ children }) => {
           >
             <html lang="en" />
           </Helmet>
-          <Header />
           <div className={Styles.main}>{children}</div>
           <footer className={Styles.footer}>
             <div>
@@ -101,6 +100,9 @@ const Layout = ({ children }) => {
           >
             <a className={Styles.contactEmail}>jackng9995@gmail.com</a>
           </div>
+
+          {/* Header put at bottom to ensure it's alwasy on the top of the ui stack */}
+          <Header />
         </>
       )}
     />

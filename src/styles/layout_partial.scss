@@ -13,8 +13,13 @@
 
 .header {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
   transition: all 0.2s ease-out;
+
+  box-shadow: 0px 5px 5px black;
+  background-color: $primary-color;
 
   &.header-active {
     transform: translateY(0);
@@ -44,8 +49,6 @@
   .nav-grow {
     flex-grow: 1;
   }
-
-  .nav-menu-icon {}
 
   .nav-list {
     display: flex;
@@ -81,7 +84,7 @@
 .main {
   position: relative;
   margin: 0 auto;
-  max-width: 1000;
+  max-width: 1000px;
   padding: 0px 7.0875rem 7.45rem;
   padding-top: 0;
   font-family: "Segoe UI", Helvetica, Arial, sans-serif;
