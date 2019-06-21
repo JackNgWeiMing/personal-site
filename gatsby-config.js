@@ -8,6 +8,15 @@ module.exports = {
     'gatsby-plugin-sass',
     'gatsby-plugin-typescript',
     {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          // include: /images/, // See below to configure properly
+          include: /.svg$/,
+        },
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: 'gatsby-starter-reasonml',
