@@ -44,7 +44,6 @@
       transition: background-color 0.2s ease-in;
       padding: 20px 20px;
       z-index: 1;
-      cursor: pointer;
 
       // &.selected {
       //   background-color: $primary-color-light;
@@ -123,6 +122,84 @@
             font-size: 14px;
           }
 
+        }
+      }
+    }
+  }
+
+}
+
+.contact {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  width: fit-content;
+  bottom: 0px;
+
+  &.contact-left {
+    left: 40px;
+  }
+
+  &.contact-right {
+    right: 40px;
+  }
+
+  &::after {
+    content: "";
+    width: 1px;
+    height: 150px;
+    border-left: 1px solid $font-color-primary;
+    margin: 0 auto;
+  }
+
+  .contact-email {
+    font-family: monospace;
+    writing-mode: vertical-lr;
+    height: fit-content;
+    padding: 10px 0;
+    transition: all 0.1s ease-in;
+
+    &:hover {
+      transform: translateY(-2px);
+      color: $secondary-color;
+    }
+
+
+  }
+
+  .contact-list {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: min-content;
+    list-style-type: none;
+
+    li {
+      width: min-content;
+
+      .icon {
+        transition: all 0.1s ease-in;
+        width: 20px;
+        height: 20px;
+        padding: 10px;
+        fill: $font-color-primary;
+        cursor: pointer;
+
+        &:hover {
+          transform: translateY(-2px);
+          fill: $secondary-color;
+        }
+
+      }
+
+      img {
+        width: 20px;
+        height: 20px;
+        transition: all 0.1s ease-out;
+
+        &:hover {
+          // filter: grayscale(100%) sepia(100%);
+          background-color: $secondary-color;
         }
       }
     }

@@ -7,6 +7,10 @@ import { StaticQuery, graphql } from 'gatsby'
 import Header from '../components/Header'
 import Icon from '../images/gatsby-icon.png'
 import Styles from '../styles/main.module.scss'
+import GithubSvg from '../images/github.svg'
+import LinkedInSvg from '../images/linkedIn.svg'
+import TwitterSvg from '../images/twitter.svg'
+import { relative } from 'path'
 
 const Layout = ({ children }) => {
   return (
@@ -38,6 +42,7 @@ const Layout = ({ children }) => {
           <Header />
           <div
             style={{
+              position: 'relative',
               margin: '0 auto',
               maxWidth: 1000,
               padding: '0px 1.0875rem 1.45rem',
@@ -51,6 +56,38 @@ const Layout = ({ children }) => {
           <footer className={Styles.footer}>
             <span className={Styles.notes}>Built by Jack Ng 🔨</span>
           </footer>
+          <div
+            className={`
+            ${Styles.contact}
+            ${Styles.contactLeft}
+          `}
+          >
+            <ul className={Styles.contactList}>
+              <li>
+                <a>
+                  <GithubSvg className={Styles.icon} />
+                </a>
+              </li>
+              <li>
+                <a>
+                  <LinkedInSvg className={Styles.icon} />
+                </a>
+              </li>
+              <li>
+                <a>
+                  <TwitterSvg className={Styles.icon} />
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div
+            className={`
+            ${Styles.contact}
+            ${Styles.contactRight}
+          `}
+          >
+            <a className={Styles.contactEmail}>jackng9995@gmail.com</a>
+          </div>
         </>
       )}
     />
