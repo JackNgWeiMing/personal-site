@@ -67,7 +67,7 @@
   &.nav-hambuger-active {
 
     .nav-hambuger-top {
-      transform: rotate(-43deg);
+      transform: rotate(-43deg-360deg);
       transform-origin: top right;
     }
 
@@ -77,13 +77,11 @@
     }
 
     .nav-hambuger-bottom {
-      transform: rotate(45deg);
+      transform: rotate(45deg+360);
       transform-origin: bottom right;
 
     }
-
   }
-
 }
 
 .nav {
@@ -96,6 +94,7 @@
     align-items: center;
     padding: 10px;
     margin-left: 10px;
+    cursor: pointer;
 
     svg {
       width: 40px;
@@ -127,6 +126,7 @@
       padding: 10px;
       font-family: monospace;
       font-size: 10pt;
+      cursor: pointer;
 
       .index {
         color: $secondary-color;
