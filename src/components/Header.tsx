@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import _ from 'lodash'
 
-import Icon from '../images/gatsby-icon.png'
+// import Icon from '../images/gatsby-icon.png'
+import Icon from '../images/logo.svg'
 import Styles from '../styles/main.module.scss'
 
 const data = [
@@ -20,16 +21,17 @@ interface Props {
   openDrawer: boolean
 }
 
-const Header: React.SFC<Props> = ({ handleDrawer, openDrawer }) => {
+type Direction = 'down' | 'up'
+const Header: React.FC<Props> = ({ handleDrawer, openDrawer }) => {
   const [offset, setOffset] = useState(0)
-  const [scrollingDirection, setDirection] = useState(false)
+  const [scrollingDirection, setDirection] = useState<Direction>('up')
 
   const handleScroll = _.throttle(_ => {
     const threshold = 100.0
     const { pageYOffset: currentOffset } = window
     const diff = currentOffset - offset
     const passThreshold = diff / threshold
-    const isScrollDown = diff > 0
+    const isScrollDown = diff > 0 ? 'down' : 'up'
 
     setDirection(isScrollDown)
 
@@ -48,12 +50,14 @@ const Header: React.SFC<Props> = ({ handleDrawer, openDrawer }) => {
       <div
         className={`
         ${Styles.header} 
-        ${scrollingDirection ? Styles.headerHide : Styles.headerActive}
+        ${
+          scrollingDirection == 'down' ? Styles.headerHide : Styles.headerActive
+        }
        `}
       >
         <div className={Styles.nav}>
           <div className={Styles.navIcon}>
-            <img src={Icon} />
+            <Icon />
           </div>
 
           <div className={Styles.navGrow} />

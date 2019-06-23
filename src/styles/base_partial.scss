@@ -27,6 +27,19 @@ body {
     font-size: 12pt;
   }
 
+  // blur effect when drawer is opened
+  &.blur {
+    overflow-y: hidden;
+
+    div[id=main] {
+      overflow-y: hidden;
+      filter: blur(5px) brightness(0.7);
+      pointer-events: none;
+      user-select: none;
+    }
+  }
+
+
 }
 
 h1 {
