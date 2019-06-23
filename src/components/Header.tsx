@@ -1,6 +1,4 @@
-import React, { useEffect, useState, useReducer, useRef } from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
+import React, { useEffect, useState } from 'react'
 import _ from 'lodash'
 
 import Icon from '../images/gatsby-icon.png'
@@ -21,6 +19,7 @@ interface Props {
   handleDrawer: () => void
   openDrawer: boolean
 }
+
 const Header: React.SFC<Props> = ({ handleDrawer, openDrawer }) => {
   const [offset, setOffset] = useState(0)
   const [scrollingDirection, setDirection] = useState(false)

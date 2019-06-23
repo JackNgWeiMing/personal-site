@@ -4,15 +4,13 @@ import Helmet from 'react-helmet'
 import _ from 'lodash'
 import { StaticQuery, graphql } from 'gatsby'
 
-import Header from '../components/Header'
-import Icon from '../images/gatsby-icon.png'
+import Header from './Header'
 import Styles from '../styles/main.module.scss'
 import GithubSvg from '../images/github.svg'
 import LinkedInSvg from '../images/linkedIn.svg'
 import TwitterSvg from '../images/twitter.svg'
-import { relative } from 'path'
 
-const Layout = ({ children }) => {
+const Layout: React.SFC<any> = ({ children }) => {
   const [isDrawerVisible, setDrawerVisible] = useState(false)
   const toggleDrawer = () => {
     setDrawerVisible(!isDrawerVisible)
