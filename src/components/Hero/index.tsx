@@ -5,7 +5,7 @@ interface Props {}
 
 const Hero: React.SFC<Props> = props => {
   return (
-    <section className={Styles.hero}>
+    <section id="about" className={Styles.hero}>
       <div>
         <span>
           <strong className={Styles.strong}>Hi my name is</strong>

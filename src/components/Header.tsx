@@ -1,18 +1,21 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-scroll'
 import _ from 'lodash'
-
-// import Icon from '../images/gatsby-icon.png'
 import Icon from '../images/logo.svg'
 import Styles from '../styles/main.module.scss'
 
 const data = [
   {
     title: 'About me',
-    path: '',
+    path: 'about',
+  },
+  {
+    title: 'Skills',
+    path: 'skill',
   },
   {
     title: 'Experience',
-    path: '',
+    path: 'experience',
   },
 ]
 
@@ -32,9 +35,7 @@ const Header: React.FC<Props> = ({ handleDrawer, openDrawer }) => {
     const diff = currentOffset - offset
     const passThreshold = diff / threshold
     const isScrollDown = diff > 0 ? 'down' : 'up'
-
     setDirection(isScrollDown)
-
     if (passThreshold > 1 || passThreshold < -1) {
       setOffset(currentOffset)
     }
@@ -56,9 +57,15 @@ const Header: React.FC<Props> = ({ handleDrawer, openDrawer }) => {
        `}
       >
         <div className={Styles.nav}>
-          <div className={Styles.navIcon}>
+          <Link
+            smooth
+            to="about"
+            className={Styles.navIcon}
+            onClick={openDrawer && handleDrawer}
+            duration={500}
+          >
             <Icon />
-          </div>
+          </Link>
 
           <div className={Styles.navGrow} />
 
@@ -66,10 +73,10 @@ const Header: React.FC<Props> = ({ handleDrawer, openDrawer }) => {
             <ul>
               {data.map((v, i) => (
                 <li>
-                  <span className={Styles.index}>0{i + 1}.</span>
-                  <a href={v.path} className={Styles.content}>
-                    {v.title}
-                  </a>
+                  <Link smooth={true} duration={500} to={v.path}>
+                    <span className={Styles.index}>0{i}.</span>
+                    <span className={Styles.content}>{v.title}</span>
+                  </Link>
                 </li>
               ))}
               <li>
@@ -82,10 +89,15 @@ const Header: React.FC<Props> = ({ handleDrawer, openDrawer }) => {
             <ul>
               {data.map((v, i) => (
                 <li key={v.title}>
-                  <a>
-                    <span className={Styles.index}>0{i + 1}.</span>
+                  <Link
+                    onClick={handleDrawer}
+                    smooth={true}
+                    duration={500}
+                    to={v.path}
+                  >
+                    <span className={Styles.index}>0{i}.</span>
                     <span className={Styles.content}>{v.title}</span>
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

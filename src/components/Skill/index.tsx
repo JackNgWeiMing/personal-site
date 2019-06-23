@@ -5,10 +5,10 @@ interface Props {}
 
 const Skill: React.SFC<Props> = props => {
   return (
-    <section className={Styles.section}>
+    <section id="skill" className={Styles.section}>
       <h3 className={Styles.sectionTitle}>
         <span className={Styles.index}> 01. </span>
-        <span className={Styles.content}>About me </span>
+        <span className={Styles.content}>Skill </span>
         <hr className={Styles.divider} />
       </h3>
       <p>
