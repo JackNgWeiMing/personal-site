@@ -25,10 +25,10 @@ const IndexPage = () => {
             <span>
               <strong className={Styles.strong}>Hi my name is</strong>
             </span>
-            <h1>Jack Ng </h1>
-            <h2>I build things for the web & mobile </h2>
+            <h1>Jack Ng</h1>
+            <h2>React & React Native Developer</h2>
             <p>
-              I'm a software engineer based Singapore speicalized in front end
+              I'm a software web developer Singapore speicalized in front end
               development in Singapore. <br /> React, React Native, Typescript
               are my best friends. I work with them to all the time.
             </p>
