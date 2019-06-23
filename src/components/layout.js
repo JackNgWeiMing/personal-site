@@ -13,6 +13,10 @@ import TwitterSvg from '../images/twitter.svg'
 import { relative } from 'path'
 
 const Layout = ({ children }) => {
+  const [isDrawerVisible, setDrawerVisible] = useState(false)
+  const toggleDrawer = () => {
+    setDrawerVisible(!isDrawerVisible)
+  }
   return (
     <StaticQuery
       query={graphql`
@@ -38,8 +42,15 @@ const Layout = ({ children }) => {
             ]}
           >
             <html lang="en" />
+            <body className={isDrawerVisible && Styles.blur} />
           </Helmet>
-          <div className={Styles.main}>{children}</div>
+          <div
+            id="main"
+            onClick={isDrawerVisible && toggleDrawer} //  close the drawer when drawer is visible
+            className={`${Styles.main}`}
+          >
+            {children}
+          </div>
           <footer className={Styles.footer}>
             <div>
               <ul className={Styles.contactList}>
@@ -92,6 +103,7 @@ const Layout = ({ children }) => {
               </li>
             </ul>
           </div>
+
           <div
             className={`
             ${Styles.contact}
@@ -101,8 +113,7 @@ const Layout = ({ children }) => {
             <a className={Styles.contactEmail}>jackng9995@gmail.com</a>
           </div>
 
-          {/* Header put at bottom to ensure it's alwasy on the top of the ui stack */}
-          <Header />
+          <Header openDrawer={isDrawerVisible} handleDrawer={toggleDrawer} />
         </>
       )}
     />
