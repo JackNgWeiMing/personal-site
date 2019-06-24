@@ -1,11 +1,11 @@
-<p align="center">
+<!-- <p align="center">
   <a href="https://www.gatsbyjs.org">
     <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
   </a>
 </p>
 <h1 align="center">
   Gatsby ReasonML Starter
-</h1>
+</h1> -->
 
 This starter for Gatsby is inspired by the default starter blog. Except this one supports ReasonML with its strongly typed, functional goodness.
 
