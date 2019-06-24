@@ -1,6 +1,8 @@
 language: node_js
 node_js:
   - "node"
+before_install:
+  - "yarn add sharp"
 deploy:
   provider: pages
   skip_cleanup: true
