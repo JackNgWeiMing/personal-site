@@ -15,27 +15,32 @@ export interface IJob {
 }
 
 const List: React.SFC<Props> = props => {
-  const { data, selected } = props
-  const selectorRef = useRef(null)
+  const { data, selected = 0 } = props
+  // const selectorRef = useRef(null)
   const currentSelectedRef = useRef(null)
   const handlClick = (index: number) => () => {
     props.onChange(index)
   }
 
-  useEffect(() => {
-    if (currentSelectedRef.current && selectorRef.current) {
-      const {
-        clientHeight,
-        clientWidth,
-        offsetLeft,
-        offsetTop,
-      } = currentSelectedRef.current
-      selectorRef.current.style.height = `${clientHeight}px`
-      selectorRef.current.style.width = `${clientWidth}px`
-      selectorRef.current.style.top = `${offsetTop}px`
-      selectorRef.current.style.left = `${offsetLeft}px`
-    }
-  }, [selected])
+  /**
+   * the highlighter id not responsive, so currently commented out
+   */
+  // useEffect(() => {
+  //   if (currentSelectedRef.current && selectorRef.current) {
+  //     const {
+  //       clientHeight,
+  //       clientWidth,
+  //       offsetLeft,
+  //       offsetTop,
+  //     } = currentSelectedRef.current
+  //     console.log(clientHeight, clientWidth, offsetLeft, offsetTop)
+
+  //     selectorRef.current.style.height = `${clientHeight}px`
+  //     selectorRef.current.style.width = `${clientWidth}px`
+  //     selectorRef.current.style.top = `${offsetTop}px`
+  //     selectorRef.current.style.left = `${offsetLeft}px`
+  //   }
+  // }, [selected])
 
   return (
     <ul className={Styles.experienceList}>
@@ -45,6 +50,7 @@ const List: React.SFC<Props> = props => {
             const isSelected = i === selected
             return (
               <li
+                key={i}
                 className={`
               ${Styles.experienceListItem} 
               ${isSelected ? Styles.selected : ''}`}
@@ -55,7 +61,7 @@ const List: React.SFC<Props> = props => {
               </li>
             )
           })}
-      <div ref={selectorRef} className={Styles.experienceListSelector} />
+      {/* <div ref={selectorRef} className={Styles.experienceListSelector} /> */}
     </ul>
   )
 }
