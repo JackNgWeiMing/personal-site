@@ -10,13 +10,12 @@ interface Props {
 export interface IJob {
   title: string
   company: string
-  period: string
+  range: string
   description: string[]
 }
 
 const List: React.SFC<Props> = props => {
   const { data, selected = 0 } = props
-  // const selectorRef = useRef(null)
   const currentSelectedRef = useRef(null)
   const handlClick = (index: number) => () => {
     props.onChange(index)
@@ -25,6 +24,8 @@ const List: React.SFC<Props> = props => {
   /**
    * the highlighter id not responsive, so currently commented out
    */
+  // const selectorRef = useRef(null)
+
   // useEffect(() => {
   //   if (currentSelectedRef.current && selectorRef.current) {
   //     const {
@@ -52,12 +53,12 @@ const List: React.SFC<Props> = props => {
               <li
                 key={i}
                 className={`
-              ${Styles.experienceListItem} 
-              ${isSelected ? Styles.selected : ''}`}
+                  ${Styles.experienceListItem} 
+                  ${isSelected ? Styles.selected : ''}`}
                 ref={isSelected ? currentSelectedRef : null}
                 onClick={handlClick(i)}
               >
-                {v.title}
+                {v.company}
               </li>
             )
           })}

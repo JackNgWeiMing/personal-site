@@ -1,10 +1,16 @@
 import * as React from 'react'
 import Styles from '../../styles/main.module.scss'
 import { ScrollReveal } from '../../components'
+import { MarkdownNode } from '../../types'
 
-interface Props {}
+interface Props {
+  data: MarkdownNode[]
+}
 
-const Skill: React.SFC<Props> = props => {
+const Skill: React.SFC<Props> = ({ data }) => {
+  const { frontmatter, html } = data[0].node
+  console.log(data)
+
   return (
     <ScrollReveal>
       <section id="skill" className={Styles.section}>
@@ -13,28 +19,15 @@ const Skill: React.SFC<Props> = props => {
           <span className={Styles.content}>Skill </span>
           <hr className={Styles.divider} />
         </h3>
-        <p>
-          Hello! I'm Jack, a software engineer based in Singapore. I develop
-          exceptional modern websites and web apps. I have Shortly after
-          graduating from
-          <strong className={Styles.strong}>Singapore Polytehcnic</strong>, I
-          joined the engineering team at Upstatement where I work on a wide
-          variety of interesting and meaningful projects on a daily basis.
-          Here's a few technologies I've been working with recently:
-        </p>
+        <p dangerouslySetInnerHTML={{ __html: html }} />
         <div>
           <ul className={Styles.skillList}>
-            <li> Javascript (ES6+) </li>
-            <li> Typescript </li>
-            <li> C# </li>
-            <li> ReasonML </li>
-            <li> HTML </li>
-            <li> CSS </li>
-            <li> React </li>
-            <li> React-native </li>
-            <li> Android </li>
-            <li> Express </li>
-            <li> AWS </li>
+            {frontmatter.skills.map((v, i) => {
+              return <li key={v}>{v}</li>
+            })}
+            <li>
+              <strong className={Styles.strong}>Read more</strong>
+            </li>
           </ul>
         </div>
       </section>

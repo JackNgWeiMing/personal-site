@@ -1,11 +1,16 @@
 import * as React from 'react'
 import Styles from '../../styles/main.module.scss'
 import { FadeIn } from '../../components'
+import { MarkdownNode } from '../../types'
 
-interface Props {}
+interface Props {
+  data: MarkdownNode[]
+}
 
 const Hero: React.SFC<Props> = props => {
   const [isMounted, setMounted] = React.useState(false)
+  const { frontmatter, html } = props.data[0].node
+
   React.useEffect(() => {
     const cancenlListner = setTimeout(() => {
       setMounted(true)
@@ -16,21 +21,15 @@ const Hero: React.SFC<Props> = props => {
 
   const one = (
     <span>
-      <strong className={Styles.strong}>Hi my name is</strong>
+      <strong className={Styles.strong}>{frontmatter.title}</strong>
     </span>
   )
 
-  const two = <h1>Jack Ng</h1>
-  const three = <h2>React & React Native Developer</h2>
-  const four = (
-    <p>
-      I'm a software web developer Singapore speicalized in front end
-      development in Singapore. <br /> React, React Native, Typescript are my
-      best friends. I work with them to all the time.
-    </p>
-  )
-
+  const two = <h1>{frontmatter.name}</h1>
+  const three = <h2>{frontmatter.subtitle}</h2>
+  const four = <p dangerouslySetInnerHTML={{ __html: html }} />
   const items = [one, two, three, four]
+
   return (
     <section id="about" className={Styles.hero}>
       {items.map((v, i) => {

@@ -55,14 +55,15 @@
 
     .experience-list-item {
 
+      transition: all 0.1s ease-in;
+      padding: 20px 20px;
+      font-size: 10pt;
+
       @include md {
         flex-shrink: 0;
         font-size: 0.825em;
         padding: 10px 20px;
       }
-
-      transition: all 0.1s ease-in;
-      padding: 20px 20px;
 
       &:hover {
         background-color: $primary-color-light;
