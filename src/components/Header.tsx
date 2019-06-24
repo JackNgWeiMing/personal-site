@@ -61,7 +61,7 @@ const Header: React.FC<Props> = ({ handleDrawer, openDrawer }) => {
             smooth
             to="about"
             className={Styles.navIcon}
-            onClick={openDrawer && handleDrawer}
+            onClick={openDrawer ? handleDrawer : null}
             duration={500}
           >
             <Icon />
@@ -72,7 +72,7 @@ const Header: React.FC<Props> = ({ handleDrawer, openDrawer }) => {
           <div className={`${Styles.navList}`}>
             <ul>
               {data.map((v, i) => (
-                <li>
+                <li key={i}>
                   <Link smooth={true} duration={500} to={v.path}>
                     <span className={Styles.index}>0{i}.</span>
                     <span className={Styles.content}>{v.title}</span>
@@ -106,7 +106,7 @@ const Header: React.FC<Props> = ({ handleDrawer, openDrawer }) => {
           <div
             className={`
             ${Styles.navHambuger}
-            ${openDrawer && Styles.navHambugerActive}
+            ${openDrawer ? Styles.navHambugerActive : ''}
           `}
             onClick={handleDrawer}
           >

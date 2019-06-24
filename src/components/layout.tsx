@@ -40,11 +40,11 @@ const Layout: React.SFC<any> = ({ children }) => {
             ]}
           >
             <html lang="en" />
-            <body className={isDrawerVisible && Styles.blur} />
+            <body className={isDrawerVisible ? Styles.blur : ''} />
           </Helmet>
           <div
             id="main"
-            onClick={isDrawerVisible && toggleDrawer} //  close the drawer when drawer is visible
+            onClick={isDrawerVisible ? toggleDrawer : null} //  close the drawer when drawer is visible
             className={`${Styles.main}`}
           >
             {children}
