@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-scroll'
 import _ from 'lodash'
-import Icon from '../images/logo.svg'
+import Icon from '../assets/logo.svg'
 import Styles from '../styles/main.module.scss'
 
 const data = [

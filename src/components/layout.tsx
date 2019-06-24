@@ -6,9 +6,9 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import Header from './Header'
 import Styles from '../styles/main.module.scss'
-import GithubSvg from '../images/github.svg'
-import LinkedInSvg from '../images/linkedIn.svg'
-import TwitterSvg from '../images/twitter.svg'
+import GithubSvg from '../assets/github.svg'
+import LinkedInSvg from '../assets/linkedIn.svg'
+import TwitterSvg from '../assets/twitter.svg'
 
 const Layout: React.SFC<any> = ({ children }) => {
   const [isDrawerVisible, setDrawerVisible] = useState(false)
