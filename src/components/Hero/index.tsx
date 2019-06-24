@@ -35,7 +35,7 @@ const Hero: React.SFC<Props> = props => {
     <section id="about" className={Styles.hero}>
       {items.map((v, i) => {
         return (
-          <FadeIn appear in={isMounted} timeout={(i + 1) * 50}>
+          <FadeIn key={i} in={isMounted} timeout={i * 50}>
             {v}
           </FadeIn>
         )

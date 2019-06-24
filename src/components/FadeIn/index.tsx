@@ -2,7 +2,7 @@ import * as React from 'react'
 import { TransitionProps } from 'react-transition-group/Transition'
 import { Transition } from 'react-transition-group'
 
-const duration = 100
+const duration = 0
 
 const defaultStyle = {
   transition: `opacity ${duration}ms ease-in`,
@@ -13,12 +13,11 @@ const transitionStyles = {
   entering: {
     opacity: 0,
     transform: 'translateY(-20px)',
-    transition: 'all 0.25s ease-in',
   },
   entered: {
     opacity: 1,
     transform: 'translateY(0px)',
-    transition: 'all 0.25s ease-in',
+    transition: 'all 0.2s ease-in',
   },
   exiting: { opacity: 1 },
   exited: { opacity: 0 },

@@ -27,6 +27,7 @@
     "react-transition-group": "^4.1.1",
     "react-typography": "^0.16.19",
     "reason-react": "^0.7.0",
+    "scrollreveal": "^4.0.5",
     "typography": "^0.16.19",
     "typography-theme-ocean-beach": "^0.16.19"
   },
@@ -49,6 +50,7 @@
     "@types/react-dom": "^16.8.4",
     "@types/react-helmet": "^5.0.8",
     "@types/react-transition-group": "^2.9.2",
+    "@types/scrollreveal": "^0.0.4",
     "gatsby-plugin-typescript": "^2.0.15",
     "graphql_ppx": "^0.2.7",
     "prettier": "^1.14.2"
