@@ -74,7 +74,12 @@ const Layout: React.SFC<any> = ({ children }) => {
                 </li>
               </ul>
             </div>
-            <span className={Styles.notes}>Built by Jack Ng 🔨</span>
+            <a
+              href="https://github.com/JackJackNg/my-amazing-website"
+              className={Styles.notes}
+            >
+              Built by Jack Ng 🔨
+            </a>
           </footer>
           <div
             className={`

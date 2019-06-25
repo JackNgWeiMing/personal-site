@@ -1,5 +1,5 @@
-@import "./color_partial.module.scss";
-@import "./responsive_partial.scss";
+@import './color_partial.module.scss';
+@import './responsive_partial.scss';
 
 h1,
 h2,
@@ -31,15 +31,13 @@ body {
   &.blur {
     overflow-y: hidden;
 
-    div[id=main] {
+    div[id='main'] {
       overflow-y: hidden;
       filter: blur(5px) brightness(0.7);
       pointer-events: none;
       user-select: none;
     }
   }
-
-
 }
 
 h1 {
@@ -47,7 +45,7 @@ h1 {
   color: $font-color-secondary;
 
   @include md {
-    font-size: 2.0em;
+    font-size: 2em;
   }
 }
 
@@ -76,7 +74,6 @@ ul {
   // font-size: 14pt;
   line-height: 1.5;
 
-
   .section-title {
     display: flex;
     flex-direction: row;
@@ -102,10 +99,8 @@ ul {
       margin: 10px 10px 0 10px;
       align-self: center;
     }
-
   }
 }
-
 
 .footer {
   display: flex;
@@ -144,7 +139,9 @@ ul {
     }
   }
 
-  .notes {}
+  .notes {
+    color: $font-color-primary;
+  }
 
   // .contact-methods {
   //   list-style-type: none;
@@ -155,7 +152,6 @@ ul {
   //   }
   // }
 }
-
 
 .bottom-space {
   margin-bottom: 1em;
