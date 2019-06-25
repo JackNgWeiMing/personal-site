@@ -3,6 +3,19 @@
   "description": "Gatsby starter to create static sites using type-safe ReasonML.",
   "version": "2.0.0",
   "author": "Ian Wilson <iwilsonq@gmail.com>",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "linters": {
+      "*.{js,jsx,ts,tsx,scss}": [
+        "prettier --write",
+        "git add"
+      ]
+    }
+  },
   "dependencies": {
     "bs-css": "^7.2.0",
     "bs-date-fns": "^0.1.6",
@@ -53,6 +66,8 @@
     "@types/scrollreveal": "^0.0.4",
     "gatsby-plugin-typescript": "^2.0.15",
     "graphql_ppx": "^0.2.7",
+    "husky": "^2.5.0",
+    "lint-staged": "^8.2.1",
     "prettier": "^1.14.2"
   },
   "repository": {
