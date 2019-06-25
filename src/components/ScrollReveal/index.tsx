@@ -7,8 +7,8 @@ const ScrollReveal: React.FC = props => {
     sr().reveal(ref.current, {
       origin: 'bottom',
       distance: '20px',
-      duration: 500,
-      delay: 200,
+      duration: 400,
+      delay: 100,
       rotate: { x: 0, y: 0, z: 0 },
       opacity: 0,
       scale: 1,
