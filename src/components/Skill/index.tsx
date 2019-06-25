@@ -19,7 +19,7 @@ const Skill: React.SFC<Props> = ({ data }) => {
           <span className={Styles.content}>Skill </span>
           <hr className={Styles.divider} />
         </h3>
-        <p dangerouslySetInnerHTML={{ __html: html }} />
+        <div dangerouslySetInnerHTML={{ __html: html }} />
         <div>
           <ul className={Styles.skillList}>
             {frontmatter.skills.map((v, i) => {

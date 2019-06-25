@@ -28,7 +28,7 @@ const Hero: React.SFC<Props> = props => {
   const two = <h1>{frontmatter.name}</h1>
   const three = <h2>{frontmatter.subtitle}</h2>
   const four = (
-    <p key={Math.random()} dangerouslySetInnerHTML={{ __html: html }} />
+    <div key={Math.random()} dangerouslySetInnerHTML={{ __html: html }} />
   )
   const items = [one, two, three, four]
 

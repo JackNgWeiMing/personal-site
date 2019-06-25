@@ -72,13 +72,7 @@ const Experience: React.FC<Props> = props => {
             <div
               className={Styles.experienceBlockDescription}
               dangerouslySetInnerHTML={{ __html: html }}
-            >
-              {/* <ul>
-                {selectedJob.description.map((v, i) => (
-                  <li key={i}>{v}</li>
-                ))}
-              </ul> */}
-            </div>
+            />
           </div>
         </div>
       </section>
