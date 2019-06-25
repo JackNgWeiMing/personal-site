@@ -156,8 +156,27 @@
   font-family: "Segoe UI", Helvetica, Arial, sans-serif;
   transition: all 0.25s ease-in;
 
-
   @include md {
     padding: 0px 2.0875rem 3.45rem;
+  }
+}
+
+.button {
+  background-color: transparent;
+  border: 1px solid $secondary-color;
+  border-radius: 5px;
+  font-family: monospace;
+  font-size: 1em;
+  color: $secondary-color;
+  padding: 10px 15px;
+  transition: background-color 0.1s ease-out;
+  text-decoration: none;
+
+  @include md {
+    margin: 10px 0;
+  }
+
+  &:hover {
+    background-color: $primary-color-light;
   }
 }

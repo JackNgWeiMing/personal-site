@@ -24,6 +24,12 @@ interface Props {
   openDrawer: boolean
 }
 
+const ResumeLink: React.FC = props => (
+  <a href="resume.pdf" target="_blank" className={Styles.button}>
+    My Resume
+  </a>
+)
+
 type Direction = 'down' | 'up'
 const Header: React.FC<Props> = ({ handleDrawer, openDrawer }) => {
   const [offset, setOffset] = useState(0)
@@ -80,7 +86,7 @@ const Header: React.FC<Props> = ({ handleDrawer, openDrawer }) => {
                 </li>
               ))}
               <li>
-                <button className={Styles.button}>My Resume</button>
+                <ResumeLink />
               </li>
             </ul>
           </div>
@@ -100,6 +106,9 @@ const Header: React.FC<Props> = ({ handleDrawer, openDrawer }) => {
                   </Link>
                 </li>
               ))}
+              <li>
+                <ResumeLink />
+              </li>
             </ul>
           </div>
 
