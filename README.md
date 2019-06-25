@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.com/JackJackNg/my-amazing-website.svg?branch=dev)](https://travis-ci.com/JackJackNg/my-amazing-website)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5069db20-a161-4798-a599-30b14e6308d9/deploy-status)](https://app.netlify.com/sites/modest-visvesvaraya-a5e17e/deploys)
+
 This starter for Gatsby is inspired by the default starter blog. Except this one supports ReasonML with its strongly typed, functional goodness.
 
 ## 🚀 Quick start
