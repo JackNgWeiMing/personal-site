@@ -5,9 +5,10 @@ before_install:
   - "yarn add sharp"
 deploy:
   provider: pages
+  target_branch: gh-pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN # Set in the settings page of your repository, as a secure variable
   keep_history: true
-  local_dir: /public/
+  local_dir: /public
   on:
     branch: dev
