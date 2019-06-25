@@ -1,11 +1,4 @@
-<!-- <p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby ReasonML Starter
-</h1> -->
+[![Build Status](https://travis-ci.com/JackJackNg/my-amazing-website.svg?branch=dev)](https://travis-ci.com/JackJackNg/my-amazing-website)
 
 This starter for Gatsby is inspired by the default starter blog. Except this one supports ReasonML with its strongly typed, functional goodness.
 
