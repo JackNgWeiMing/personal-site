@@ -33,10 +33,12 @@ const Layout: React.SFC<any> = ({ children }) => {
             meta={[
               {
                 name: 'description',
-                content:
-                  'Static site built with Gatsbyjs, ReasonML, and React.',
+                content: "Jack's website",
               },
-              { name: 'keywords', content: 'reasonml, bucklescript, react' },
+              {
+                name: 'keywords',
+                content: 'software engineer, javascript, react, singapore',
+              },
             ]}
           >
             <html lang="en" />
