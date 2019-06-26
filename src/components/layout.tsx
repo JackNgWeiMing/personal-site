@@ -78,7 +78,7 @@ const Layout: React.SFC<any> = ({ children }) => {
               href="https://github.com/JackJackNg/my-amazing-website"
               className={Styles.notes}
             >
-              Built by Jack Ng 🔨
+              Checkout the source code 🔨
             </a>
           </footer>
           <div
