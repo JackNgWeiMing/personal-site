@@ -1,6 +1,6 @@
 module.exports = {
-  extends: ['airbnb', 'prettier'],
-  plugins: ['prettier'],
+  extends: ['airbnb', 'prettier', 'plugin:@typescript-eslint/recommended'],
+  plugins: ['prettier', '@typescript-eslint'],
   env: {
     browser: true,
     es6: true,
@@ -25,8 +25,11 @@ module.exports = {
     'react/static-property-placement': 'off', // disable if necessary
     'react/jsx-props-no-spreading': 'off', // disable if necessary
     'react/require-default-props': 'off',
+    'no-use-before-define': 'off',
+    'react/prop-types': 'off',
+    'import/prefer-default-export': 'off',
   },
-  parser: 'babel-eslint',
+  parser: '@typescript-eslint/parser',
   settings: {
     'import/resolver': {
       node: {
