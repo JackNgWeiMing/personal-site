@@ -9,6 +9,14 @@ sequence: 3
 
 Project: Micro Lending Platform
 
-Technology: Java, Postgress, Node.js, Cordova, Angular
+<ul class="job-desc">
+<li>Maintaining existing system and working on bug-fix </li>
+</ul>
 
-- Maintaining existing system and working on bug-fix
+<ul class="tags">
+<li>Java</li>
+<li>Postgress</li>
+<li>Node.js</li>
+<li>Cordova</li>
+<li>Angular</li>
+</ul>
