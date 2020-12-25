@@ -32,7 +32,15 @@ const EachExperience: React.FunctionComponent<EachExperienceProps> = function Ea
       <h2>
         {data.frontmatter.title} , {data.frontmatter.duration}
       </h2>
-      <Paragraph dangerouslySetInnerHTML={{ __html: data.html }} />
+
+      <Paragraph
+        dangerouslySetInnerHTML={{
+          // why wrap additional using <div></div>
+          // https://github.com/gatsbyjs/gatsby/issues/11108#issuecomment-455472204
+          __html: `<div>${data.html}</div>`,
+        }}
+      />
+      {/* <Paragraph>{data.html}</Paragraph> */}
     </EachExperienceContainer>
   );
 };
