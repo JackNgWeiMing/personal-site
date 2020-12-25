@@ -1,45 +1,37 @@
 module.exports = {
-  extends: ['standard'],
-  plugins: ['standard', 'react'],
+  extends: ['airbnb', 'prettier'],
+  plugins: ['prettier'],
+  env: {
+    browser: true,
+    es6: true,
+  },
   rules: {
-    'no-var': 'error', // optional, recommended when using es6+
-    'no-unused-vars': 1, // recommended
-    'arrow-spacing': ['error', { 'before': true, 'after': true }], // recommended
-    'indent': ['error', 2],
-    'comma-dangle': ['error', {
-      'objects': 'only-multiline',
-      'arrays': 'only-multiline',
-      'imports': 'never',
-      'exports': 'never',
-      'functions': 'never'
-    }],
-    "strict": ["never"],
-
-    // options to emulate prettier setup
-    'semi': ['error', 'never'],
-    'max-len': ['error', { 'code': 80 }],
-    'template-curly-spacing': ['error', 'always'],
-    'arrow-parens': ['error', 'as-needed'],
-
-    // standard.js
-    'space-before-function-paren': ['error', {
-      'named': 'always',
-      'anonymous': 'always',
-      'asyncArrow': 'always'
-    }],
-
-    // standard plugin - options
-    'standard/object-curly-even-spacing': ['error', 'either'],
-    'standard/array-bracket-even-spacing': ['error', 'either'],
-    'standard/computed-property-even-spacing': ['error', 'even'],
-    'standard/no-callback-literal': ['error', ['cb', 'callback']],
-
-    // react plugin - options
-    'react/jsx-uses-react': 'error',
-    'react/jsx-uses-vars': 'error'
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+        png: 'never',
+      },
+    ],
+    'import/no-extraneous-dependencies': 'off',
+    'prettier/prettier': 'error',
+    'no-console': 'warn',
+    'react/jsx-one-expression-per-line': 'off',
+    'react/jsx-filename-extension': 'off', // disable if necessary
+    'react/static-property-placement': 'off', // disable if necessary
+    'react/jsx-props-no-spreading': 'off', // disable if necessary
+    'react/require-default-props': 'off',
   },
   parser: 'babel-eslint',
-  parserOptions: {
-    'ecmaVersion': 8, // optional, recommended 6+
-  }
-}
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
+  },
+};

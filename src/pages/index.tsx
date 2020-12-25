@@ -1,66 +1,58 @@
-import * as React from 'react'
-import { graphql } from 'gatsby'
-import { Layout, Hero, Skill, Experience } from '../components'
+import { graphql, PageProps } from 'gatsby';
+import React from 'react';
+import { Helmet } from 'react-helmet';
+import App from '../components/App';
+import '../assets/styles/main.css';
+import '../assets/styles/normalize.css';
+import { ContentContext } from '../content/ContentContext';
+import { DataType } from '../content/DataType';
 
-type Props = {
-  data: {
-    hero: any
-    skill: any
-    experience: any
-  }
-}
-
-const IndexPage: React.FC<Props> = ({ data }) => {
+export default ({ data }: PageProps<DataType>) => {
   return (
-    <Layout>
-      <Hero data={data.hero.edges} />
-      <Skill data={data.skill.edges} />
-      <Experience data={data.experience.edges} />
-    </Layout>
-  )
-}
+    <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Gatsby Simplefolio</title>
+        <html lang="en" />
+        <meta name="description" content="Gatsby Simplefolio" />
+      </Helmet>
+      <ContentContext.Provider value={data}>
+        <App />
+      </ContentContext.Provider>
+    </>
+  );
+};
 
-export default IndexPage
-
-export const myQuery = graphql`
+export const query = graphql`
   query myQuery {
-    hero: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/hero/" } }) {
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            name
-            subtitle
-            contactText
-          }
-          html
-        }
-      }
-    }
-
-    skill: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/skill/" } }
+    reading: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/reading/" } }
+      sort: { fields: [frontmatter___ranking, frontmatter___title], order: ASC }
     ) {
       edges {
         node {
           id
           frontmatter {
             title
-            date
-            company
-            range
-            name
-            subtitle
-            contactText
-            skills
+            author
+            ranking
+          }
+        }
+      }
+    }
+    skill: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/skill/" } }) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
           }
           html
         }
       }
     }
-
     experience: allMarkdownRemark(
+      sort: { fields: [frontmatter___sequence], order: DESC }
       filter: { fileAbsolutePath: { regex: "/experience/" } }
     ) {
       edges {
@@ -70,15 +62,13 @@ export const myQuery = graphql`
             title
             date
             company
-            range
-            name
-            subtitle
-            contactText
-            skills
+            start
+            duration
+            sequence
           }
           html
         }
       }
     }
   }
-`
+`;

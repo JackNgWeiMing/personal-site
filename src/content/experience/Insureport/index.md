@@ -2,8 +2,14 @@
 date: '2019-4-30'
 title: 'React Native Developer'
 company: 'Freelance'
-range: 'Feb - April 2019'
+start: 'Feb 2019'
+duration: '3 months'
+sequence: 2
 ---
+
+Project: Accident Report Mobile Application
+
+Technology: React Native, Firebase Cloud Function
 
 - Cross platform mobile application that help user to record critical information
   when an accident happened. (such as location, accident scenes etc.)

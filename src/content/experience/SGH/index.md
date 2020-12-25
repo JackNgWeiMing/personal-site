@@ -1,11 +1,17 @@
 ---
 date: '2019-5-01'
-title: 'Backend & Mobile Application Developer, Final Year Project'
-company: 'Singapore General Hospital'
-range: 'April 2018 - May 2019'
+title: 'React Web Developer'
+company: 'Singapore General Hospital - School Project'
+start: 'Apr 2018'
+duration: '13 months'
+sequence: 0
 ---
 
-- Cross platform mobile application, cost-effective admin web application to help
+Project: Antitmicrobial App
+
+Technology: React, React Native, Firebase
+
+- cross platform mobile application, cost-effective admin web application to help
   pharmacist record and view recommended prescription based on severity and concurrent symptoms.
-- Carry out the project with other developers and designers from gathering user requirement, UI prototypes to software development and user acceptance test.
-- Resolved slow connectivity issue in hospital by supporting offline and pre-sync feature.
+- carry out the project with other developers and designers from gathering user requirement, ui prototypes to software development and user acceptance test.
+- resolved slow connectivity issue in hospital by supporting offline and pre-sync feature.

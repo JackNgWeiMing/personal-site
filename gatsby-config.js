@@ -1,40 +1,57 @@
 module.exports = {
-  siteMetadata: {
-    title: "Jack's website",
-    author: 'Jack Ng',
-  },
   plugins: [
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sass',
-    'gatsby-plugin-typescript',
+    `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-styled-components`,
     {
-      resolve: 'gatsby-plugin-react-svg',
+      resolve: `gatsby-source-filesystem`,
       options: {
-        rule: {
-          include: /.svg$/,
-        },
-      },
-    },
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: "Jack's personal website",
-        short_name: "Jack's website",
-        start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
-        display: 'minimal-ui',
-        icon: 'src/assets/logo.png', // This path is relative to the root of the site.
+        name: `images`,
+        path: `${__dirname}/src/images/`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `contents`,
-        path: `${__dirname}/src/content`,
+        name: `content`,
+        path: `${__dirname}/src/content/`,
       },
     },
-    'gatsby-transformer-remark',
-    'gatsby-plugin-offline',
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages/`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        // CommonMark mode (default: true)
+        commonmark: true,
+        // Footnotes mode (default: true)
+        footnotes: true,
+        // Pedantic mode (default: true)
+        pedantic: true,
+        // GitHub Flavored Markdown mode (default: true)
+        gfm: true,
+        // Plugins configs
+        plugins: [],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Gatsby Simplefolio`,
+        short_name: `Simplefolio`,
+        start_url: `/`,
+        background_color: `#fff`,
+        theme_color: `#02aab0`,
+        display: `standalone`,
+        icon: 'src/images/favicon.png',
+      },
+    },
   ],
-}
+};
