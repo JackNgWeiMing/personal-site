@@ -21,7 +21,16 @@ type SkillProps = {
 };
 
 const Skill: React.FunctionComponent<SkillProps> = function Skill(props) {
-  return <Paragraph dangerouslySetInnerHTML={{ __html: props.data.html }} />;
+  const { data } = props;
+  return (
+    <Paragraph
+      dangerouslySetInnerHTML={{
+        // why wrap additional using <div></div>
+        // https://github.com/gatsbyjs/gatsby/issues/11108#issuecomment-455472204
+        __html: `<div>${data.html}</div>`,
+      }}
+    />
+  );
 };
 
 const Paragraph = styled.p`
