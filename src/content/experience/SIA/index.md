@@ -9,7 +9,10 @@ sequence: 1
 
 Project: Cabin Crew Training Application
 
-Technology: React Native
-
-- Prototyping cabin crew trainee training schedule.
-- It stores and displays training schedules, details, materials such as documents, video, pictures.
+<ul class="job-desc">
+<li>Prototyping cabin crew trainee training schedule.</li>
+<li>It stores and displays training schedules, details, materials such as documents, video, pictures.</li>
+</ul>
+<ul class="tags">
+<li>React Native</li>
+</ul>

@@ -39,15 +39,25 @@ const EachExperience: React.FunctionComponent<EachExperienceProps> = function Ea
 
 const EachExperienceContainer = styled.div`
   padding: 20px 0;
-  color: #757575;
 
-  ul {
+  ul.job-desc {
     padding-left: 0;
+    li {
+      padding-top: 10px;
+      list-style-type: none;
+    }
   }
 
-  li {
-    padding-top: 10px;
-    list-style-type: none;
+  ul.tags {
+    display: inline-block;
+    padding-left: 0;
+    li {
+      border-radius: 5px;
+      background-color: #1a1a1a;
+      padding: 5px 10px;
+      display: inline-block;
+      list-style: circle;
+    }
   }
 `;
 
