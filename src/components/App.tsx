@@ -1,9 +1,9 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import Intro from './Intro';
 import Main from './Main';
 
-function App() {
+function App(): React.ReactElement {
   return (
     <Root>
       <Container>
@@ -16,12 +16,11 @@ function App() {
 
 const Root = styled.div`
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-  color: white;
-  background-color: #161819;
+  background-color: #0f0f0f;
   box-sizing: border-box;
   overflow-x: hidden;
   height: 100%;
-  color: #636667;
+  color: #979797;
 `;
 
 const Container = styled.div`

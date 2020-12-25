@@ -28,6 +28,7 @@ module.exports = {
     'no-use-before-define': 'off',
     'react/prop-types': 'off',
     'import/prefer-default-export': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
   },
   parser: '@typescript-eslint/parser',
   settings: {

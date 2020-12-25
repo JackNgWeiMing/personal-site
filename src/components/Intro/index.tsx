@@ -31,7 +31,12 @@ function Intro() {
         </li> */}
         <li>
           <Resume>
-            <a href={ResumePdf} target="_blank" download="resume-software-engineer-jack">
+            <a
+              href={ResumePdf}
+              rel="noopener noreferrer"
+              target="_blank"
+              download="resume-software-engineer-jack"
+            >
               <span>
                 <Icon src={FileSvg} />
               </span>
@@ -80,13 +85,17 @@ const Navigations = styled.ul`
 
 const Email = styled.a``;
 const Container = styled.div``;
-const ShortBio = styled.p`
-  font-size: 0.9em;
-  line-height: 1.5em;
-`;
+// const ShortBio = styled.p`
+//   font-size: 0.9em;
+//   line-height: 1.5em;
+// `;
 
 const Resume = styled.div`
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #1a1a1a;
   margin-top: 20px;
+  border-radius: 5px;
 `;
 const Icon = styled.img`
   /* background-color: white; */
