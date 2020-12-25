@@ -1,17 +1,53 @@
 ---
-title: 'About Me'
-skills:
-  - JavaScript (ES6+) & Typescript
-  - HTML & (S)CSS
-  - React & React Native
-  - Redux
-  - Jest
-  - ReasonML
-  - Node.js & Express
-  - GraphQL
-  - AWS
+title: 'Skills'
 ---
 
-Hello ! I'm a web developer in Singapore. I am just graduated from a Singapore polytechnic studying Diploma in Information Technology. I am currently searching for a front end engineer position in Singapore.
+There are some other technologies i have worked with:
 
-Here is some technologies i have been working with:
+Languege:
+
+- c#
+- javascript, typescript
+
+Frontend
+
+- react & react native
+- redux
+- jest
+- css, scss
+
+Backend
+
+- express
+- asp.net core
+- openid connect (identity server 4)
+- mssql , postgress
+
+Ops
+
+- docker
+- terrform
+- aws
+
+Tooling
+
+- window, linux , macos
+- vscode + vim
+- git
+- wsl
+- fish
+
+Other Exposures
+
+- java
+- rxjs
+- vue
+- angular
+- graphql
+- reasonml
+- firebase
+- mongodb
+- ethereum: solidity , truffer
+- meiliserach (general search engine)
+- ci/cd
+- puppeteer
