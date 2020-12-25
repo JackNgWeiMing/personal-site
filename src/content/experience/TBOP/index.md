@@ -1,7 +1,7 @@
 ---
 date: '2019-7-30'
 title: 'Software Engineer'
-company: 'TBOP, Local CA Subsidiary Company'
+company: 'TBOP, Netrust (Local CA) Subsidiary Company'
 start: 'Aug 2019'
 duration: '5 months'
 sequence: 3

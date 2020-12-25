@@ -36,18 +36,21 @@ Tooling
 - git
 - wsl
 - fish
+- notion
 
-Other Exposures
+Other Exposures:
 
 - java
+- c, c++
+- reasonml
 - rxjs
 - vue
 - angular
 - graphql
-- reasonml
 - firebase
 - mongodb
 - ethereum: solidity , truffer
 - meiliserach (general search engine)
 - ci/cd
 - puppeteer
+- etc
