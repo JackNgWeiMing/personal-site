@@ -2,7 +2,7 @@ import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 import MeImage from '../../images/me.png';
-import FileSvg from '../../assets/icons/description-24px.svg';
+import DownloadSvg from '../../assets/icons/get_app-24px.svg';
 import ResumePdf from '../../assets/resume.pdf';
 
 function Intro() {
@@ -30,19 +30,15 @@ function Intro() {
           <Link to="#story">My Story</Link>
         </li> */}
         <li>
-          <Resume>
-            <a
-              href={ResumePdf}
-              rel="noopener noreferrer"
-              target="_blank"
-              download="resume-software-engineer-jack"
-            >
-              <span>
-                <Icon src={FileSvg} />
-              </span>
-              Resume 2018-2020.pdf
-            </a>
-          </Resume>
+          <ResumeLink
+            href={ResumePdf}
+            rel="noopener noreferrer"
+            target="_blank"
+            download="resume-software-engineer-jack"
+          >
+            <Icon src={DownloadSvg} />
+            Resume 2018-2020.pdf
+          </ResumeLink>
         </li>
       </Navigations>
     </Container>
@@ -90,16 +86,18 @@ const Container = styled.div``;
 //   line-height: 1.5em;
 // `;
 
-const Resume = styled.div`
-  display: inline-block;
+const ResumeLink = styled.a`
+  display: inline-flex;
+  align-items: center;
+  width: auto;
   padding: 5px 10px;
   background-color: #1a1a1a;
   margin-top: 20px;
   border-radius: 5px;
 `;
 const Icon = styled.img`
-  /* background-color: white; */
   width: 1em;
+  padding-right: 5px;
 `;
 
 export default Intro;
