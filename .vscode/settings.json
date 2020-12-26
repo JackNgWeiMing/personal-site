@@ -1,4 +1,7 @@
 {
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "files.eol": "\n"
+  "files.eol": "\n",
+  "typescript.format.enable": false,
+  "javascript.validate.enable": false,
+  "typescript.validate.enable": false
 }
