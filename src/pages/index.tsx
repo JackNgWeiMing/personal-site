@@ -8,13 +8,14 @@ import { ContentContext } from '../content/ContentContext';
 import { DataType } from '../content/DataType';
 
 export default ({ data }: PageProps<DataType>) => {
+  const {} = data;
   return (
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Gatsby Simplefolio</title>
+        <title>Jack - React Developer</title>
         <html lang="en" />
-        <meta name="description" content="Gatsby Simplefolio" />
+        <meta name="description" content="Portfolio" />
       </Helmet>
       <ContentContext.Provider value={data}>
         <App />
