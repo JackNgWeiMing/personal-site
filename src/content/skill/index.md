@@ -20,8 +20,9 @@ Backend
 
 - express
 - asp.net core
+- mssql, postgress
+- ORMs: ef core, typeorm, hibernate
 - openid connect (identity server 4)
-- mssql , postgress
 
 Ops
 
@@ -31,8 +32,8 @@ Ops
 
 Tooling
 
-- window, linux , macos
-- vscode + vim
+- window, linux, macOS
+- vscode + vim emulator
 - git
 - wsl
 - fish
@@ -48,7 +49,7 @@ Other Exposures:
 - angular
 - graphql
 - firebase
-- mongodb
+- noSQL: mongodb, firestore
 - ethereum: solidity , truffer
 - meiliserach (general search engine)
 - ci/cd
