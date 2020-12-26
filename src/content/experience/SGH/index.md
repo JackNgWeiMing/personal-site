@@ -7,23 +7,18 @@ duration: '13 months'
 sequence: 0
 ---
 
-Project: Antitmicrobial App
+Project: Antimicrobial Guideline Application
 
 <ul class="job-desc">
   <li> 
-  cross platform mobile application, cost-effective admin web application to help
-  pharmacist record and view recommended prescription based on severity and concurrent symptoms
+  Developed cross platform mobile application, admin web application for antimicrobial prescription based on various severity and concurrent symptoms.
   </li>
   <li>
-  carry out the project with other developers and designers from gathering user requirement, ui prototypes to software development and user acceptance test.
-  </li>
-  <li>
-  resolved slow connectivity issue in hospital by supporting offline and pre-sync feature.
+  Worked as a team to carry out full SDLC cycles: user requirement gathering, UI prototype, development and user acceptance test.
   </li>
 </ul>
 
 <ul class="tags">
-
   <li>React Native</li>
   <li>Firebase</li>
 </ul>
