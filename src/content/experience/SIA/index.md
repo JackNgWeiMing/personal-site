@@ -10,8 +10,7 @@ sequence: 1
 Project: Cabin Crew Training Application
 
 <ul class="job-desc">
-<li>Prototyping cabin crew trainee training schedule.</li>
-<li>It stores and displays training schedules, details, materials such as documents, video, pictures.</li>
+<li>Prototyping cabin crew training schedule mobile application</li>
 </ul>
 <ul class="tags">
 <li>React Native</li>
