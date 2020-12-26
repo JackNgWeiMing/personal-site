@@ -8,7 +8,6 @@ import { ContentContext } from '../content/ContentContext';
 import { DataType } from '../content/DataType';
 
 export default ({ data }: PageProps<DataType>) => {
-  const {} = data;
   return (
     <>
       <Helmet>
