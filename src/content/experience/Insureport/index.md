@@ -2,20 +2,21 @@
 date: '2019-4-30'
 title: 'React Native Developer'
 company: 'Freelance'
-start: 'Feb 2019'
+start: 'Feb 2019 - May 2019'
 duration: '3 months'
 sequence: 2
 ---
 
-Project: Accident Report Mobile Application
+Project : Car Accident Reporting Application
 
 <ul class="job-desc">
-    <li>Developed cross platform mobile application  </li>
-    <li>Worked with designer to develop UI/UX match the use case requirements</li>
-    <li></li>
+    <li> Built a cross platform mobile app that help driver to record critical information when an accident happened.</li>
+    <li> Generate report using headless browser Puppeteer.</li>
+    <li> Working with UI designer and an IOS developer to ensure consistent user experience on both Android and IOS platforms.</li>
 </ul>
 
 <ul class="tags">
+    <li>Typescript</li>
     <li>React Native</li>
     <li>Firebase Cloud Function</li>
 </ul>

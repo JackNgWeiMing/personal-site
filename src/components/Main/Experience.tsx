@@ -29,9 +29,7 @@ const EachExperience: React.FunctionComponent<EachExperienceProps> = function Ea
         <StartDate>{data.frontmatter.start.toUpperCase()}</StartDate>
         <Company>{data.frontmatter.company}</Company>
       </Frontmatter>
-      <h2>
-        {data.frontmatter.title} , {data.frontmatter.duration}
-      </h2>
+      <h2>{data.frontmatter.title}</h2>
 
       <Paragraph
         dangerouslySetInnerHTML={{
