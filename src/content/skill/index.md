@@ -2,56 +2,35 @@
 title: 'Skills'
 ---
 
-There are some other technologies i have worked with:
+Programming Language:
 
-Languege:
+- Advanced in Typescript and JavaScript
+- Competent in C#
 
-- c#
-- javascript, typescript
+Front-end
 
-Frontend
+- Advanced at React , React Native and Redux
+- Competent in Next.js, Gatsby.js
+- Competent in Css, Scss
+- Novice in Jest , Enzyme
 
-- react & react native
-- redux
-- jest
-- css, scss
+Back-end
 
-Backend
-
-- express
-- asp.net core
-- mssql, postgress
-- ORMs: ef core, typeorm, hibernate
-- openid connect (identity server 4)
+- Competent in backend frameworks: Express, Asp Net Core
+- Competent in relational database : PostgreSQL, Microsoft SQL server
+- Competent in OpenId Connect : Identity Server 4
+- Competent in ORMs: EF Core, Hibernate , TypeORM
 
 Ops
 
-- docker
-- terrform
-- aws
+- Competent in Docker
+- Competent in AWS
 
 Tooling
 
-- window, linux, macOS
-- vscode + vim emulator
-- git
-- wsl
-- fish
-- notion
+- Competent in Window , Linux , MacOS
+- Competent in Git
+- Competent in Visual Studio Code + Vim emulation.
 
-Other Exposures:
-
-- java
-- c, c++
-- reasonml
-- rxjs
-- vue
-- angular
-- graphql
-- firebase
-- noSQL: mongodb, firestore
-- ethereum: solidity , truffer
-- meiliserach (general search engine)
-- ci/cd
-- puppeteer
-- etc
+I also had exposured to (Novice):
+Vue, Angular, Firebase, Mongodb, Firestore, Ethereum, MeiliSearch, CI/CD, Terraform ,WSL etc

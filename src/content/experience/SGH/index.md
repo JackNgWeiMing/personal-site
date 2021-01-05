@@ -1,7 +1,7 @@
 ---
 date: '2019-5-01'
 title: 'React Web Developer'
-company: 'Singapore General Hospital - School Project'
+company: 'Singapore General Hospital - Final Year Project'
 start: 'Apr 2018 - May 2019'
 duration: '13 months'
 sequence: 0
