@@ -108,8 +108,16 @@ const Container = styled.div`
 const Contacts = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  font-size: 0.8em;
+  @media only screen and (min-width: 320px) {
+    justify-content: center;
+    align-items: center;
+  }
+  @media only screen and (min-width: 768px) {
+    justify-content: start;
+    align-items: start;
+    font-size: 0.8em;
+  }
+
   /* align-items: center; */
   /* justify-content: space-around; */
   /* flex-wrap: wrap; */
@@ -145,8 +153,20 @@ function Icon(props: IconProps) {
 const IconContainer = styled.span`
   display: inline-flex;
   vertical-align: middle;
-  align-items: center;
   font-size: 0.9em;
+
+  @media only screen and (min-width: 320px) {
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  @media only screen and (min-width: 768px) {
+    align-items: start;
+    justify-content: start;
+    text-align: left;
+  }
 `;
 
 const IconImg = styled.img`
