@@ -12,7 +12,7 @@ export default ({ data }: PageProps<DataType>) => {
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Jack - React Developer</title>
+        <title>Jack - React, Software Engineer</title>
         <html lang="en" />
         <meta name="description" content="Portfolio" />
       </Helmet>
