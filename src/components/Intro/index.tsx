@@ -61,6 +61,11 @@ const Name = styled.p`
 
 const Description = styled.p`
   line-height: 1.8em;
+  text-align: center;
+
+  @media only screen and (min-width: 768px) {
+    text-align: left;
+  }
 `;
 
 const Navigations = styled.ul`
@@ -68,10 +73,14 @@ const Navigations = styled.ul`
   padding-left: 0;
   li {
     line-height: 1.5em;
+    text-align: center;
+    @media only screen and (min-width: 768px) {
+      text-align: left;
+    }
   }
   a {
     font-size: 1em;
-    text-decoration: none;
+    text-decoration: underline;
     color: white;
     &:hover {
       text-decoration: underline;
@@ -80,7 +89,18 @@ const Navigations = styled.ul`
 `;
 
 const Email = styled.a``;
-const Container = styled.div``;
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding-top: 30px;
+  @media only screen and (min-width: 768px) {
+    display: block;
+    height: auto;
+  }
+`;
 // const ShortBio = styled.p`
 //   font-size: 0.9em;
 //   line-height: 1.5em;
