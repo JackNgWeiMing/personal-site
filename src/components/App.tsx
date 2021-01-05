@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Intro from './Intro';
 import Main from './Main';
+import Footer from './Footer';
 
 function App(): React.ReactElement {
   return (
@@ -10,10 +11,10 @@ function App(): React.ReactElement {
         <Intro />
         <Main />
       </Container>
+      <Footer />
     </Root>
   );
 }
-
 const Root = styled.div`
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   background-color: #0f0f0f;
