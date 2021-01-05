@@ -2,7 +2,11 @@ import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 import MeImage from '../../images/me.png';
-import DownloadSvg from '../../assets/icons/get_app-24px.svg';
+
+import LinkedIn from '../../assets/icons/linkedIn.svg';
+import Github from '../../assets/icons/github.svg';
+import Mail from '../../assets/icons/mail-24px.svg';
+import DownloadSvg from '../../assets/icons/description-24px.svg';
 import ResumePdf from '../../assets/resume.pdf';
 
 function Intro() {
@@ -10,10 +14,9 @@ function Intro() {
     <Container>
       <ProfileImage src={MeImage} />
       <Name>Jack Ng , Singapore</Name>
-      <Email>jackng9995@gmail.com</Email>
       <Description>
         Software Engineer <br />
-        (react, javascript, .net)
+        Specialized in React
       </Description>
       <Navigations>
         <li>
@@ -41,6 +44,11 @@ function Intro() {
           </ResumeLink>
         </li>
       </Navigations>
+      <Contacts>
+        <Icon link src={Github} text="https://github.com/jackngweiming" />
+        <Icon src={Mail} text="jackngweiming@gmail.com" />
+        <Icon link src={LinkedIn} text="https://www.linkedin.com/in/jack-ng-b2593b151/" />
+      </Contacts>
     </Container>
   );
 }
@@ -88,7 +96,6 @@ const Navigations = styled.ul`
   }
 `;
 
-const Email = styled.a``;
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -106,6 +113,16 @@ const Container = styled.div`
 //   line-height: 1.5em;
 // `;
 
+const Contacts = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  font-size: 0.8em;
+  /* align-items: center; */
+  /* justify-content: space-around; */
+  /* flex-wrap: wrap; */
+`;
+
 const ResumeLink = styled.a`
   display: inline-flex;
   align-items: center;
@@ -114,9 +131,34 @@ const ResumeLink = styled.a`
   background-color: #1a1a1a;
   margin-top: 20px;
   border-radius: 5px;
+  text-decoration: none !important;
 `;
-const Icon = styled.img`
-  width: 1em;
+
+function Icon(props: IconProps) {
+  const { text, src, link } = props;
+  return (
+    <IconContainer>
+      <IconImg src={src} />
+      {link ? (
+        <a target="_blank" rel="noreferrer" href={text}>
+          {text}
+        </a>
+      ) : (
+        <span>{text}</span>
+      )}
+    </IconContainer>
+  );
+}
+
+const IconContainer = styled.span`
+  display: inline-flex;
+  vertical-align: middle;
+  align-items: center;
+  font-size: 0.9em;
+`;
+
+const IconImg = styled.img`
+  width: 20px;
   padding-right: 5px;
 `;
 
