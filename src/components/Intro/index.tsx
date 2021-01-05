@@ -29,16 +29,8 @@ function Intro() {
         <li>
           <Link to="#reading">My reading</Link>
         </li>
-        {/* <li>
-          <Link to="#story">My Story</Link>
-        </li> */}
         <li>
-          <ResumeLink
-            href={ResumePdf}
-            rel="noopener noreferrer"
-            target="_blank"
-            download="resume-software-engineer-jack"
-          >
+          <ResumeLink href={ResumePdf} rel="noopener noreferrer" target="_blank">
             <Icon src={DownloadSvg} />
             Resume 2018-2020.pdf
           </ResumeLink>
