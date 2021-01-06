@@ -13,13 +13,13 @@ function Footer() {
       <FooterMain>
         <Contacts>
           <Icon link src={Github} text="https://github.com/jackngweiming" />
-          <Icon src={Mail} text="jackngweiming@gmail.com" />
+          <Icon src={Mail} text="jackng9995@gmail.com" />
           <Icon link src={LinkedIn} text="https://www.linkedin.com/in/jack-ng-b2593b151/" />
         </Contacts>
         <div style={{ display: 'flex', justifyContent: 'center' }}>
           <ResumeLink href={ResumePdf} rel="noopener noreferrer" target="_blank">
             <Icon src={Download} />
-            Resume 2018-2020.pdf
+            Resume 2018-2021.pdf
           </ResumeLink>
         </div>
       </FooterMain>
