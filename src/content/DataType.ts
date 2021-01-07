@@ -1,4 +1,7 @@
 export type DataType = {
+  introduction: {
+    html: string;
+  };
   reading: GraphValue<{
     frontmatter: {
       title: string;

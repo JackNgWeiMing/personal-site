@@ -25,6 +25,9 @@ export default ({ data }: PageProps<DataType>) => {
 
 export const query = graphql`
   query myQuery {
+    introduction: markdownRemark(fileAbsolutePath: { regex: "/introduction.md/" }) {
+      html
+    }
     reading: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/reading/" } }
       sort: { fields: [frontmatter___ranking, frontmatter___title], order: ASC }
