@@ -16,5 +16,6 @@ Project: Antimicrobial Guideline Application
 
 <ul class="tags">
   <li>React Native</li>
+  <li>Redux</li>
   <li>Firebase</li>
 </ul>

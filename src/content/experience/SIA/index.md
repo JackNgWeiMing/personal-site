@@ -16,4 +16,5 @@ Project: Cabin Crew Training Application
 <ul class="tags">
     <li>Typescript</li>
     <li>React Native</li>
+    <li>Redux</li>
 </ul>
