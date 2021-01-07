@@ -12,7 +12,7 @@ import ResumePdf from '../../assets/resume.pdf';
 function Intro() {
   return (
     <Container>
-      <ProfileImage src={MeImage} />
+      <ProfileImage src={MeImage} width="80" height="80" />
       <Name>Jack Ng , Singapore</Name>
       <Description>
         Software Engineer <br />
@@ -37,9 +37,19 @@ function Intro() {
         </li>
       </Navigations>
       <Contacts>
-        <Icon link src={Github} text="https://github.com/jackngweiming" />
-        <Icon src={Mail} text="jackng9995@gmail.com" />
-        <Icon link src={LinkedIn} text="https://www.linkedin.com/in/jack-ng-b2593b151/" />
+        <Icon
+          link
+          src={Github}
+          imgProps={{ alt: 'github', title: 'github' }}
+          text="https://github.com/jackngweiming"
+        />
+        <Icon src={Mail} imgProps={{ alt: 'email', title: 'email' }} text="jackng9995@gmail.com" />
+        <Icon
+          link
+          src={LinkedIn}
+          imgProps={{ alt: 'linkedIn', title: 'linkedIn' }}
+          text="https://www.linkedin.com/in/jack-ng-b2593b151/"
+        />
       </Contacts>
     </Container>
   );
@@ -134,11 +144,17 @@ const ResumeLink = styled.a`
   text-decoration: none !important;
 `;
 
+type IconProps = {
+  text: string;
+  src: string;
+  link: boolean;
+  imgProps: React.HTMLProps<HTMLImageElement>;
+};
 function Icon(props: IconProps) {
-  const { text, src, link } = props;
+  const { text, src, link, imgProps } = props;
   return (
     <IconContainer>
-      <IconImg src={src} />
+      <IconImg src={src} width="20" height="20" {...imgProps} />
       {link ? (
         <a target="_blank" rel="noreferrer" href={text}>
           {text}
