@@ -22,6 +22,7 @@ function Footer() {
             Resume 2018-2021.pdf
           </ResumeLink>
         </div>
+        <PoweredBy>Powered by Gatsby.js</PoweredBy>
       </FooterMain>
     </Container>
   );
@@ -29,9 +30,14 @@ function Footer() {
 
 export default Footer;
 const Container = styled.footer`
-  /* background-color: #1a1a1a; */
   width: 100vw;
   min-height: 200px;
+`;
+
+const PoweredBy = styled.p`
+  text-align: center;
+  margin: 20px 0;
+  font-style: italic;
 `;
 
 const Contacts = styled.div`
@@ -88,6 +94,10 @@ const IconContainer = styled.span`
   align-items: center;
 
   font-size: 0.9em;
+
+  a {
+    width: 250px;
+  }
 `;
 
 const ResumeLink = styled.a`
