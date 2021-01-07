@@ -11,7 +11,6 @@ export const ReadingSection: React.FunctionComponent<ReadingProps> = function Re
       <h1 id="reading">My reading</h1>
       <Blockquote>
         <p>For to know a man‘s library is, in some measure, to know his mind. </p>
-        <p>Geraldine Brooks, March</p>
       </Blockquote>
       <div>
         {data.edges.map((edge, index) => (
