@@ -76,7 +76,7 @@ function Icon(props: IconProps) {
   const { text, src, link } = props;
   return (
     <IconContainer>
-      <IconImg src={src} width="80" height="80" />
+      <IconImg src={src} width="20" height="20" />
       {link ? (
         <a target="_blank" rel="noreferrer" href={text}>
           {text}
