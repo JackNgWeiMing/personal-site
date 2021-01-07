@@ -73,7 +73,7 @@ const Frontmatter = styled.p`
   margin-bottom: 0;
 `;
 
-const Paragraph = styled.p`
+const Paragraph = styled.div`
   font-size: 0.9em;
   line-height: 1.5em;
 `;
