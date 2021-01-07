@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: `/personal-site`, // when publusing to github page , need to prefix <project-name> in all assets:js,png,...etc.
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
