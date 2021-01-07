@@ -68,8 +68,8 @@ const IconImg = styled.img`
 
 type IconProps = {
   src: string;
-  text: string;
-  link: boolean;
+  text?: string;
+  link?: boolean;
 };
 
 function Icon(props: IconProps) {

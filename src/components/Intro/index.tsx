@@ -145,16 +145,16 @@ const ResumeLink = styled.a`
 `;
 
 type IconProps = {
-  text: string;
   src: string;
-  link: boolean;
-  imgProps: React.HTMLProps<HTMLImageElement>;
+  text?: string;
+  link?: boolean;
+  imgProps?: React.HTMLProps<HTMLImageElement>;
 };
 function Icon(props: IconProps) {
   const { text, src, link, imgProps } = props;
   return (
     <IconContainer>
-      <IconImg src={src} width="20" height="20" {...imgProps} />
+      <IconImg width="20" height="20" {...(imgProps as any)} src={src} />
       {link ? (
         <a target="_blank" rel="noreferrer" href={text}>
           {text}

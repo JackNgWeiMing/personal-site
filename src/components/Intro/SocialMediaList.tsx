@@ -1,7 +1,8 @@
 import React from 'react';
-export type SocialMediaListProps = {};
 
-export function SocialMediaList(props: SocialMediaListProps) {
+export type SocialMediaListProps = any;
+
+export function SocialMediaList() {
   return (
     <ul>
       <li>
