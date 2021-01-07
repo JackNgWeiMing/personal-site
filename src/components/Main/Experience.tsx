@@ -4,7 +4,7 @@ import { ContentContext } from '../../content/ContentContext';
 import { DataType } from '../../content/DataType';
 import { SectionContainer } from './SectionContainer';
 
-export const ExperienceSection: React.FunctionComponent = function ExperienceSection(props) {
+export const ExperienceSection: React.FunctionComponent = function ExperienceSection() {
   const { experience: data } = useContext(ContentContext);
   return (
     <SectionContainer>

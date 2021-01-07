@@ -3,5 +3,5 @@
   "files.eol": "\n",
   "typescript.format.enable": false,
   "javascript.validate.enable": false,
-  "typescript.validate.enable": false
+  "typescript.tsserver.experimental.enableProjectDiagnostics": true
 }
